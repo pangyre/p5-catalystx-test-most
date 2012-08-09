@@ -1,6 +1,6 @@
 package CatalystX::Test::Most;
 use strictures;
-use HTTP::Request::Common (qw/ GET POST DELETE PUT /);
+use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our @EXPORT = ( qw{ GET POST DELETE PUT },
