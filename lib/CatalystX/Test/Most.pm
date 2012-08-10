@@ -8,8 +8,8 @@ our $VERSION = "0.01";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },
+                qw{ ctx },
                 grep { defined &{$_} } @Test::More::EXPORT );
-
 
 sub import {
     my ( $package, $app, $args ) = @_;
@@ -22,16 +22,11 @@ sub import {
 
     {
         no strict "refs";
-        for ( @EXPORT )
-        {
-            *{"${calling_package}::$_"} = \&{$_};
-        }
+        *{"${calling_package}::$_"} = \&{$_} for @EXPORT;
     }
 }
 
-sub ctx {
-    [ ctx_request(@_) ]->[1];
-}
+sub ctx { [ ctx_request(@_) ]->[1] }
 
 1;
 
