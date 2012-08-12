@@ -22,15 +22,12 @@ sub import {
 
     {
         no strict "refs";
-        for ( @EXPORT )
-        {
-            *{"${calling_package}::$_"} = \&{$_};
-        }
+        *{"${calling_package}::$_"} = \&{$_} for @EXPORT;
     }
 }
 
 # delete is obviously a problem and the rest should maybe be the uc
-# anyway or something new?
+# anyway and not export the HTTP::Request::Common ones or something new?
 #sub get    { request( GET( @_ ) ); }
 #sub put    { request( PUT( @_ ) ); }
 #sub post   { request( POST( @_ ) ); }
