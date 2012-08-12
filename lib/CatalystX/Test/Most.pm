@@ -43,11 +43,41 @@ __END__
 
 =head1 Name
 
-CatalystX::Test::Most - test base for unit tests on Catalyst applications.
+CatalystX::Test::Most - test base pulling in L<Catalyst::Test>, L<Test::More>, L<Test::Fatal>, and L<HTTP::Request::Common> for unit tests on Catalyst applications.
 
 =head1 Synopsis
 
-...
+ use CatalystX::Test::Most "MyApp";
+ ok request("/")->is_success, "/ is okay";
+ is exception { request("/no-such-uri") }, undef,
+    "404s do not throw exceptions";
+ is request("/no-such-uri")->code, 404, "And do return 404";
+ done_testing(3);
+
+ ok 1 - / is okay
+ ok 2 - 404s do not throw exceptions
+ ok 3 - And do return 404
+ 1..3
+
+=head1 Exported Functions
+
+=head2 Catalyst::Test
+
+Everything so see its documentaiton: L<Catalyst::Test>. L<CatalystX::Test::Most> is basically and overloaded version of it.
+
+=head2 Test::More
+
+All of its exported functions so see its documentation: L<Test::More>.
+
+=head2 Test::Fatal
+
+See C<exception> in L<Test::Fatal>.
+
+=head1 Original Function
+
+=head3 C<ctx>
+
+This is a wrapper to get the context object. It will only work on local tests (not remote servers).
 
 =head1 Copyright and License
 
