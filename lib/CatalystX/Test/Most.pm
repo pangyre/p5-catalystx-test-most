@@ -4,7 +4,7 @@ use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our $AUTHORITY = "cpan:ASHLEY";
-our $VERSION = "0.01_02";
+our $VERSION = "0.01";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },
@@ -75,9 +75,17 @@ See C<exception> in L<Test::Fatal>.
 
 =head1 Original Function
 
-=head3 C<ctx>
+=over 4
+
+=item * C<ctx>
 
 This is a wrapper to get the context object. It will only work on local tests (not remote servers).
+
+=back
+
+=head1 Notes
+
+L<strictures> are exported.
 
 =head1 Copyright and License
 
