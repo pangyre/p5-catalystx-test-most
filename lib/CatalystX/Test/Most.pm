@@ -4,12 +4,12 @@ use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our $AUTHORITY = "cpan:ASHLEY";
-our $VERSION = "0.01";
+our $VERSION = "0.01_02";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },
+                qw{ ctx },
                 grep { defined &{$_} } @Test::More::EXPORT );
-
 
 sub import {
     my ( $package, $app, $args ) = @_;
@@ -29,9 +29,14 @@ sub import {
     }
 }
 
-sub ctx {
-    [ ctx_request(@_) ]->[1];
-}
+# delete is obviously a problem and the rest should maybe be the uc
+# anyway or something new?
+#sub get    { request( GET( @_ ) ); }
+#sub put    { request( PUT( @_ ) ); }
+#sub post   { request( POST( @_ ) ); }
+#sub delete { request( DELETE( @_ ) ); }
+
+sub ctx { [ ctx_request(@_) ]->[1] }
 
 1;
 
