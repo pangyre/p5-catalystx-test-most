@@ -4,3 +4,4 @@
 
 0.02 Sun Aug 12 23:26:25 PDT 2012
   * Add repository to Makefile.PL.
+  * Add Catalyst proper to deps.
