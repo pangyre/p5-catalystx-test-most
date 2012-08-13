@@ -43,7 +43,7 @@ __END__
 
 =head1 Name
 
-CatalystX::Test::Most - test base pulling in L<Catalyst::Test>, L<Test::More>, L<Test::Fatal>, and L<HTTP::Request::Common> for unit tests on Catalyst applications.
+CatalystX::Test::Most - Test base pulling in L<Catalyst::Test>, L<Test::More>, L<Test::Fatal>, and L<HTTP::Request::Common> for unit tests on Catalyst applications.
 
 =head1 Synopsis
 
