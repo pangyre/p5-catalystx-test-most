@@ -2,6 +2,6 @@
   * Release to the CPAN.
   * Tag v0.01.
 
-0.02 Sun Aug 12 23:26:25 PDT 2012
+0.02 Mon Aug 13 10:27:59 PDT 2012
   * Add repository to Makefile.PL.
-  * Add Catalyst proper to deps.
+  * Add Catalyst proper to deps to address tester failures.
