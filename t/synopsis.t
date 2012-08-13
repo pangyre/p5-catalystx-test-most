@@ -12,16 +12,17 @@ SKIP: {
     my $synopsis = "";
     while ( <$fh> )
     {
-        if ( /=head1 Synopsis/ .. /=head\d (?!Synopsis)/
+        if ( /^=head1 Synopsis/ .. /^=head\d (?!Synopsis)/
              and not /^=/ ) {
             $synopsis .= $_;
         }
     }
     close $fh;
 
-    ok( $synopsis, "Got code out of the Synopsis space to eval" );
+    ok $synopsis, "Got code out of the Synopsis space to eval";
+    $synopsis =~ s/\#.+\r?\n//g;
     note $synopsis;
 
     eval "$synopsis; 1";
-    die( $@ . "\n" . $synopsis ) if $@;
+    die $@ . "\n" . $synopsis if $@;
 }
