@@ -4,7 +4,7 @@ use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our $AUTHORITY = "cpan:ASHLEY";
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },

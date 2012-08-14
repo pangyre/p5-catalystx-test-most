@@ -5,3 +5,6 @@
 0.02 Mon Aug 13 10:27:59 PDT 2012
   * Add repository to Makefile.PL.
   * Add Catalyst proper to deps to address tester failures.
+
+0.03 Mon Aug 13 18:22:36 PDT 2012
+  * Silly me, I thought Catalyst::Action::RenderView was core Cat.
