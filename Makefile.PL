@@ -12,5 +12,9 @@ requires "HTTP::Request::Common" => undef;
 requires "Test::Exception" => undef;
 requires "strictures" => undef;
 
+system("pod2text lib/CatalystX/Test/Most.pm > README") == 0
+    or die "Couldn't update the README file"
+    if $Module::Install::AUTHOR;
+
 auto_install;
 WriteAll;
