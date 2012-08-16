@@ -8,3 +8,6 @@
 
 0.03 Mon Aug 13 18:22:36 PDT 2012
   * Silly me, I thought Catalyst::Action::RenderView was core Cat.
+
+0.04 ...
+  * Require Catalyst 5.8 in Makefile.PL to match t/lib/MyApp.pm.
