@@ -2,11 +2,6 @@ package MyApp;
 use Moose;
 use namespace::autoclean;
 use Catalyst::Runtime 5.80;
-#use Catalyst qw/
-#    ConfigLoader
-#    Static::Simple
-#/;
-
 extends "Catalyst";
 our $VERSION = "0.01";
 
