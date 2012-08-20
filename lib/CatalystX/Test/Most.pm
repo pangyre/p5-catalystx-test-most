@@ -63,7 +63,7 @@ CatalystX::Test::Most - Test base pulling in L<Catalyst::Test>, L<Test::More>, L
 
 =head2 Catalyst::Test
 
-Everything, so see its documentaiton: L<Catalyst::Test>. L<CatalystX::Test::Most> is basically and overloaded version of it.
+Everything, so see its documentaiton: L<Catalyst::Test>. L<CatalystX::Test::Most> is basically an overloaded version of it.
 
 =head2 Test::More
 
