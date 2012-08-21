@@ -18,8 +18,8 @@ Synopsis
 
 Exported Functions from Other Packages
   Catalyst::Test
-    Everything, so see its documentaiton: Catalyst::Test.
-    CatalystX::Test::Most is basically and overloaded version of it.
+    Everything, so see its documentation: Catalyst::Test.
+    CatalystX::Test::Most is basically an overloaded version of it.
 
   Test::More
     All of its exported functions; see its documentation: Test::More.

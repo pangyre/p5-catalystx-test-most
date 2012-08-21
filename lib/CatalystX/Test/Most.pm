@@ -4,7 +4,7 @@ use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our $AUTHORITY = "cpan:ASHLEY";
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },
@@ -63,7 +63,7 @@ CatalystX::Test::Most - Test base pulling in L<Catalyst::Test>, L<Test::More>, L
 
 =head2 Catalyst::Test
 
-Everything, so see its documentaiton: L<Catalyst::Test>. L<CatalystX::Test::Most> is basically an overloaded version of it.
+Everything, so see its documentation: L<Catalyst::Test>. L<CatalystX::Test::Most> is basically an overloaded version of it.
 
 =head2 Test::More
 
