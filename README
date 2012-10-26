@@ -54,8 +54,8 @@ New Functions
 
     *   "mech"
 
-        Get a Test::WWW::Mechanize::Catalyst. Unless specified, the app name
-        and the arguments are recycled from the "import" of
+        Get a Test::WWW::Mechanize::Catalyst object. Unless specified, the
+        app name and the arguments are recycled from the "import" of
         CatalystX::Test::Most.
 
 Notes
