@@ -7,6 +7,7 @@ repository "git://github.com/pangyre/p5-catalystx-test-most";
 requires "Catalyst" => 5.8;
 requires "Catalyst::Action::RenderView" => undef;
 requires "Catalyst::Test" => undef;
+requires "Test::WWW::Mechanize::Catalyst" => undef;
 requires "Test::More" => undef;
 requires "HTTP::Request::Common" => undef;
 requires "Test::Exception" => undef;
