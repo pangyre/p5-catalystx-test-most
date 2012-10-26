@@ -1,5 +1,6 @@
 package CatalystX::Test::Most;
 use strictures;
+no warnings "uninitialized";
 use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
@@ -39,7 +40,7 @@ sub ctx { [ ctx_request(@_) ]->[1] }
 
 # No args means function call.
 sub mech {
-    my $self = shift; # Not actually using.
+    my $self = shift if $_[0] eq __PACKAGE__; # Toss it.
     my @args = ( catalyst_app => +shift || $App );
     push @args, shift if @_;
     require Test::WWW::Mechanize::Catalyst;
@@ -104,7 +105,7 @@ See C<exception> in L<Test::Fatal>.
 
 You have easy access to a L<Test::WWW::Mechanize::Catalyst> object. There are no related functions, just the object methods.
 
-=head1 New Function
+=head1 New Functions
 
 =over 4
 
@@ -112,15 +113,9 @@ You have easy access to a L<Test::WWW::Mechanize::Catalyst> object. There are no
 
 This is a wrapper to get the context object. It will only work on local tests (not remote servers).
 
-=back
-
-=head1 Class Method
-
 =item * C<mech>
 
 Get a L<Test::WWW::Mechanize::Catalyst>. Unless specified, the app name and the arguments are recycled from the C<import> of L<CatalystX::Test::Most>.
-
- my $mech = CatalystX::Test::Most->mech;
 
 =back
 
