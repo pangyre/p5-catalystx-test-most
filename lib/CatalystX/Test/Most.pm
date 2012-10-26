@@ -115,7 +115,7 @@ This is a wrapper to get the context object. It will only work on local tests (n
 
 =item * C<mech>
 
-Get a L<Test::WWW::Mechanize::Catalyst>. Unless specified, the app name and the arguments are recycled from the C<import> of L<CatalystX::Test::Most>.
+Get a L<Test::WWW::Mechanize::Catalyst> object. Unless specified, the app name and the arguments are recycled from the C<import> of L<CatalystX::Test::Most>.
 
 =back
 
