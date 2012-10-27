@@ -1,3 +1,5 @@
+0.06
+
 0.05 Fri Oct 26 06:01:52 PDT 2012
   * Reverse Change log chronology.
   * Add "mech" function/method: Test::WWW::Mechanize::Catalyst.

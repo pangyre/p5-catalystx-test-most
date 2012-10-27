@@ -5,7 +5,7 @@ use HTTP::Request::Common ( qw{ GET POST DELETE PUT } );
 use Test::More;
 use Test::Fatal;
 our $AUTHORITY = "cpan:ASHLEY";
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 our @EXPORT = ( qw{ GET POST DELETE PUT },
                 qw{ request ctx_request action_redirect },
                 qw{ exception },
@@ -83,7 +83,7 @@ CatalystX::Test::Most - Test base pulling in L<Catalyst::Test>, L<Test::More>, L
  #    1..3
  # ok 2 - Tests with plain Catalyst::Test
  #    ok 1 - GET /
- #    ok 2 - My app all right
+ #    ok 2 - That's my app all right
  #    1..2
  # ok 3 - Tests with Test::WWW::Mechanize::Catalyst
 
